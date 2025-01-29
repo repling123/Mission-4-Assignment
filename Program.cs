@@ -39,6 +39,7 @@ public class Program
                 // Call the print board method 
                 gb.PrintBoard(board);
                 char playerOneChoice = Console.ReadKey().KeyChar;
+                Console.WriteLine();
                 
                 // Makes sure their choice is an available option
                 if (int.TryParse(playerOneChoice.ToString(), out int playerOneChoiceInt) && playerOneChoiceInt >= 1 &&
@@ -103,7 +104,7 @@ public class Program
 
                     if (board[row, col] != 'X' && board[row, col] != 'O')
                     {
-                        board[row, col] = 'X';
+                        board[row, col] = 'O';
                     }
                     else
                     {
